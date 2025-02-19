@@ -20,20 +20,20 @@ const MyAspiration = lazy(() => import("../pages/MyAspiration"));
 
 
 const routes = [
-  { path: "/", element: <PrivateRoute element={<Home />} /> },
-  { path: "/users", element: <UsersPage /> },
+  { path: "", element: <PrivateRoute element={<Home />} /> },
+  { path: "users", element: <UsersPage /> },
   { path: "*", element: <NotFound /> },
-  { path: "/register", element: <RegisterUser /> },
-  { path: "/loginAdmin", element: <LoginAdmin /> },
-  { path: "/login", element: <LoginUser /> },
-  { path: "/inputaspirasi", element: <PrivateRoute element={<FormAspirasi />} /> },
-  { path: "/semuaaspirasi", element: <PrivateRoute element={<SemuaAspirasi />} /> },
-  { path: "/profil", element: <PrivateRoute element={<ProfileUser />} /> },
-  { path: "/aspirasisaya", element: <PrivateRoute element={<MyAspiration />} /> },
-  { path: "/aspirasilist", element: <PrivateRouteAdmin element={<AspirasiList />} /> },
-  { path: "/registeradmin", element: <PrivateRouteAdmin element={<RegisterAdmin />} /> },
-  { path: "/admincontrollerlist", element: <PrivateRouteAdmin element={<AdminControllerList />} /> },
-  // { path: "/edit", element: <PrivateRouteAdmin element={<Edit />} /> }, tidak saya fungsikan dulu
+  { path: "register", element: <RegisterUser /> },
+  { path: "loginAdmin", element: <LoginAdmin /> },
+  { path: "login", element: <LoginUser /> },
+  { path: "inputaspirasi", element: <PrivateRoute element={<FormAspirasi />} /> },
+  { path: "semuaaspirasi", element: <PrivateRoute element={<SemuaAspirasi />} /> },
+  { path: "profil", element: <PrivateRoute element={<ProfileUser />} /> },
+  { path: "aspirasisaya", element: <PrivateRoute element={<MyAspiration />} /> },
+  { path: "aspirasilist", element: <PrivateRouteAdmin element={<AspirasiList />} /> },
+  { path: "registeradmin", element: <PrivateRouteAdmin element={<RegisterAdmin />} /> },
+  { path: "admincontrollerlist", element: <PrivateRouteAdmin element={<AdminControllerList />} /> },
+  // { path: "edit", element: <PrivateRouteAdmin element={<Edit />} /> }, tidak saya fungsikan dulu
 ];
 
 export default routes;

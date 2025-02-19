@@ -1,19 +1,7 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
-  Box,
-  Flex,
-  Button,
-  useDisclosure,
-  Stack,
-  Link,
-  IconButton,
-  Drawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerHeader,
-  DrawerOverlay,
+  Box, Flex, Button, useDisclosure, Stack, IconButton,
+  Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
@@ -29,24 +17,22 @@ const Navbar = () => {
   return (
     <Box as="header" bg="teal.500" p={4}>
       <Flex justify="space-between" align="center">
-       
         <Box color="white" fontWeight="bold" fontSize="xl">
           Donggala APP
         </Box>
 
-        
         <Flex display={{ base: "none", md: "flex" }} gap={4} align="center">
-          <Link color="white" href="/">Beranda</Link>
-          <Link color="white" href="/inputaspirasi">Form Aspirasi</Link>
-          <Link color="white" href="/semuaaspirasi">Semua Aspirasi</Link>
-          <Link color="white" href="/aspirasisaya">Aspirasi Saya</Link>
-          <Link color="white" href="/profil">Profil</Link>
+          <Link color="white" to="/">Beranda</Link>
+          <Link color="white" to="/inputaspirasi">Form Aspirasi</Link>
+          <Link color="white" to="/semuaaspirasi">Semua Aspirasi</Link>
+          <Link color="white" to="/aspirasisaya">Aspirasi Saya</Link>
+          <Link color="white" to="/profil">Profil</Link>
           <Button colorScheme="red" size="sm" onClick={handleLogout}>
             Logout
           </Button>
         </Flex>
 
-        {/* humburger untuk mobile */}
+        {/* Hamburger untuk mobile */}
         <IconButton
           aria-label="Open Menu"
           icon={<HamburgerIcon />}
@@ -61,14 +47,13 @@ const Navbar = () => {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader>Pilih Menu</DrawerHeader>
-
           <DrawerBody>
             <Stack spacing={4}>
-              <Link color="teal.500" href="/">Beranda</Link>
-              <Link color="teal.500" href="/inputaspirasi">Form Aspirasi</Link>
-              <Link color="teal.500" href="/semuaaspirasi">Semua Aspirasi</Link>
-              <Link color="white" href="/aspirasisaya">Aspirasi Saya</Link>
-              <Link color="teal.500" href="/profil">Profil</Link>
+              <Link color="teal.500" to="/">Beranda</Link>
+              <Link color="teal.500" to="/inputaspirasi">Form Aspirasi</Link>
+              <Link color="teal.500" to="/semuaaspirasi">Semua Aspirasi</Link>
+              <Link color="teal.500" to="/aspirasisaya">Aspirasi Saya</Link>
+              <Link color="teal.500" to="/profil">Profil</Link>
               <Button colorScheme="red" size="sm" onClick={handleLogout}>
                 Logout
               </Button>
